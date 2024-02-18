@@ -1,4 +1,5 @@
 ---
+import { getUrl } from '../scripts/getUrl'
 import BaseLayout from './BaseLayout.astro'
 const { frontmatter } = Astro.props
 ---
@@ -20,6 +21,8 @@ const { frontmatter } = Astro.props
   </div>
 
   <slot />
+
+  <a href={getUrl('/blog')}><< Back to blog page</a>
 </BaseLayout>
 
 <style>
