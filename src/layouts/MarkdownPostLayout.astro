@@ -1,6 +1,7 @@
 ---
 import { getUrl } from '../scripts/getUrl'
 import BaseLayout from './BaseLayout.astro'
+
 const { frontmatter } = Astro.props
 ---
 
@@ -14,7 +15,7 @@ const { frontmatter } = Astro.props
     {
       frontmatter.tags.map((tag) => (
         <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+          <a href={getUrl(`/tags/${tag}`)}>{tag}</a>
         </p>
       ))
     }
