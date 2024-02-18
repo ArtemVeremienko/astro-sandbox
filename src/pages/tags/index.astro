@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getUrl } from '../../scripts/getUrl'
 
 const allPosts = await Astro.glob('../posts/*.md')
 const tags = [...new Set(allPosts.flatMap((post) => post.frontmatter.tags))]
@@ -11,7 +12,7 @@ const pageTitle = 'Tag Index'
     {
       tags.map((tag) => (
         <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+          <a href={getUrl(`/tags/${tag}`)}>{tag}</a>
         </p>
       ))
     }
