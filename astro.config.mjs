@@ -4,6 +4,7 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://artemveremienko.github.io/astro-sandbox/',
-  integrations: [preact()]
-});
+  site: 'https://artemveremienko.github.io/astro-sandbox',
+  base: '/astro-sandbox',
+  integrations: [preact()],
+})
