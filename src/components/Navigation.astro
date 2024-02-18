@@ -1,9 +1,9 @@
 ---
 import {getUrl} from '../scripts/getUrl'
 ---
-<div class="nav-links">
+<div transition:animate="slide" class="nav-links">
   <a href={getUrl('/')}>Home</a>
-  <a href={getUrl("/about")}>About</a>
+  <a href={getUrl("/about")} data-astro-reload>About</a>
   <a href={getUrl("/blog")}>Blog</a>
   <a href={getUrl("/tags")}>Tags</a>
 </div>
